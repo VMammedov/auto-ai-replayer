@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto AI Replayer privacy policy</title>
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<style>
+  :root {
+    --bg: #131922;
+    --panel: #1B2330;
+    --text: #E9EDF4;
+    --accent: #FFC24B;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; color: var(--text); }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .4rem; color: var(--accent); }
+  p, ul { margin: .6rem 0; }
+  li { margin: .3rem 0; }
+  .meta { opacity: .75; margin: 0 0 1.5rem; }
+  code {
+    font-size: .92em;
+    background: var(--panel);
+    padding: .1em .35em;
+    border-radius: .25em;
+  }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .home-link { display: inline-block; margin-bottom: 1.5rem; }
+</style>
+</head>
+<body>
+<a class="home-link" href="index.html">&larr; Auto AI Replayer</a>
+<h1>Auto AI Replayer privacy policy</h1>
+<p class="meta">Effective 25 October 2026</p>
+
+<p>Auto AI Replayer is a browser extension that types a short follow-up reply, such as &ldquo;continue&rdquo;, into an AI chat after each response finishes. This page explains what it does with your data. The short version: it keeps your settings on your own device and sends nothing anywhere.</p>
+
+<h2>What stays on your device</h2>
+<ul>
+  <li><strong>Your settings.</strong> The chat you picked, your prompt, the batch size, the reply text, the wait time, the done marker, your wrapper text and your notification choice.</li>
+  <li><strong>Run progress.</strong> How many replies have been sent in the current run, its status, and a short activity log.</li>
+  <li><strong>The message box you picked</strong>, if you used &ldquo;Pick message box&rdquo;: a label and position that identify that box on the chat site.</li>
+</ul>
+<p>All of this is saved with the browser&rsquo;s extension storage on your computer. The extension has no server and cannot upload it.</p>
+
+<h2>What the extension reads on a chat page</h2>
+<p>While a run is active, the extension reads the page you chose (claude.ai, chatgpt.com or gemini.google.com) to find the message box and send button, to see whether a reply is still being written, and to read the end of the latest reply so it can look for your done marker and notice a repeated ending. It also counts the messages in the conversation to tell whether you have written one yourself. This text is processed in your browser and discarded. It is not stored beyond the page, not sent to the developer, and not sent to any third party.</p>
+<p>&ldquo;Save replies&rdquo; copies the replies already on your screen into a Markdown file that your browser downloads to your computer.</p>
+
+<h2>What the extension does not do</h2>
+<ul>
+  <li>It does not collect, transmit, sell or share personal data.</li>
+  <li>It has no analytics, advertising, tracking or accounts.</li>
+  <li>It does not make network requests of its own and does not load remote code.</li>
+  <li>It does not run on any site other than claude.ai, chatgpt.com and gemini.google.com.</li>
+</ul>
+
+<h2>Permissions</h2>
+<ul>
+  <li><code>storage</code> keeps your settings and run progress on your device.</li>
+  <li><code>scripting</code> lets the extension start its page script in a chat tab that was already open when you installed or updated it.</li>
+  <li><code>notifications</code> shows one desktop notification when a run ends. You can turn it off in the popup.</li>
+  <li>Access to claude.ai, chatgpt.com and gemini.google.com is needed to do the one thing the extension is for on those three sites.</li>
+</ul>
+
+<h2>The chat services themselves</h2>
+<p>The messages the extension sends are sent by your browser to the chat service you are signed in to, exactly as if you had typed them. That service&rsquo;s own privacy policy and terms apply to them. Auto AI Replayer is an independent project and is not affiliated with Anthropic, OpenAI or Google.</p>
+
+<h2>Children</h2>
+<p>The extension is not directed at children and collects no information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at this address with a new effective date. A change that affects data handling would also be noted in the extension&rsquo;s store listing.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <strong><a href="mailto:vusal.memmedli25official@gmail.com">vusal.memmedli25official@gmail.com</a></strong></p>
+</body>
+</html>

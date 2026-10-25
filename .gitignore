@@ -1,0 +1,8 @@
+# Extension source stays local; this repo publishes only docs/ (the Pages site).
+/background.js
+/content.js
+/manifest.json
+/popup.css
+/popup.html
+/popup.js
+/icons/

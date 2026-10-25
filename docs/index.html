@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto AI Replayer</title>
+<meta name="description" content="Auto AI Replayer types a &quot;continue&quot; reply in Claude, ChatGPT and Gemini after each response, so one long prompt is answered in batches.">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<style>
+  :root {
+    --bg: #131922;
+    --panel: #1B2330;
+    --text: #E9EDF4;
+    --accent: #FFC24B;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  main {
+    max-width: 38rem;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 .4rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.4rem 0 .6rem;
+    color: var(--accent);
+  }
+  p, ul, ol { margin: .6rem 0; max-width: 42ch; }
+  li { margin: .4rem 0; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .lede {
+    font-size: 1.1rem;
+    max-width: 48ch;
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .badges li {
+    margin: 0;
+    font-size: .85rem;
+    background: var(--panel);
+    padding: .3rem .6rem;
+    border-radius: .3rem;
+  }
+  figure {
+    background: var(--panel);
+    margin: 1.2rem 0;
+    padding: .75rem;
+    border-radius: .4rem;
+  }
+  figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .25rem;
+  }
+  figcaption {
+    margin-top: .5rem;
+    font-size: .9rem;
+    opacity: .85;
+    max-width: 48ch;
+  }
+  .stop-list {
+    padding-left: 1.3rem;
+  }
+  .stop-list li {
+    max-width: 44ch;
+  }
+  .panel {
+    background: var(--panel);
+    padding: 1rem 1.1rem;
+    border-radius: .4rem;
+    max-width: none;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--panel);
+    font-size: .9rem;
+    opacity: .85;
+  }
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .5rem;
+  }
+  .logo-row img {
+    width: 40px;
+    height: 40px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<div class="logo-row">
+  <img src="assets/logo-128.png" alt="" width="40" height="40">
+  <span>Auto AI Replayer</span>
+</div>
+
+<h1>Auto AI Replayer</h1>
+<p class="lede">
+  Auto AI Replayer types a &ldquo;continue&rdquo; reply in an AI
+  chat after each response, so one long prompt gets answered in
+  batches on Claude, ChatGPT and Gemini.
+</p>
+
+<ul class="badges">
+  <li>Claude</li>
+  <li>ChatGPT</li>
+  <li>Gemini</li>
+  <li>No tracking</li>
+</ul>
+
+<h2>How it looks</h2>
+
+<figure>
+  <img src="assets/screenshot-1-paste-once-1280x800.png"
+       alt="Popup with a long prompt pasted once into a single text box before starting a run."
+       width="1280" height="800" loading="lazy">
+  <figcaption>Paste your long prompt once, then start the run.</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/screenshot-2-replies-for-you-1280x800.png"
+       alt="Extension automatically sending a short continue reply in the chat after the AI finishes answering."
+       width="1280" height="800" loading="lazy">
+  <figcaption>It replies &ldquo;continue&rdquo; for you after each answer.</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/screenshot-3-see-what-is-sent-1280x800.png"
+       alt="Popup activity log showing exactly which replies were sent and when."
+       width="1280" height="800" loading="lazy">
+  <figcaption>A plain log shows exactly what was sent.</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/screenshot-4-stays-out-of-the-way-1280x800.png"
+       alt="Small, unobtrusive popup window sitting beside the chat page without covering it."
+       width="1280" height="800" loading="lazy">
+  <figcaption>The popup stays small and out of your way.</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/screenshot-5-knows-when-to-stop-1280x800.png"
+       alt="Run ending automatically after the extension detected the chosen done marker in a reply."
+       width="1280" height="800" loading="lazy">
+  <figcaption>It knows when to stop, instead of running forever.</figcaption>
+</figure>
+
+<h2>Built to stop</h2>
+<p>A run ends on its own when any of these happen:</p>
+<ol class="stop-list">
+  <li>The reply contains your chosen done marker.</li>
+  <li>The run reaches your reply limit.</li>
+  <li>You type or send a message yourself.</li>
+  <li>Two replies in a row end the same way.</li>
+  <li>You press the Stop button.</li>
+</ol>
+
+<h2>Private by design</h2>
+<p>
+  Auto AI Replayer keeps your settings and run progress on your
+  own device and has no server to send them to. Full details are
+  in the <a href="privacy-policy.html">privacy policy</a>.
+</p>
+
+<h2>Independent project</h2>
+<p>
+  Auto AI Replayer is an independent project and is not
+  affiliated with, endorsed by, or sponsored by Anthropic,
+  OpenAI or Google. Claude is a trademark of Anthropic, ChatGPT
+  is a trademark of OpenAI, and Gemini is a trademark of Google,
+  each referenced here only to describe the sites the extension
+  works with.
+</p>
+
+<h2>Install</h2>
+<p class="panel">
+  The Chrome Web Store, Firefox Add-ons and Opera Add-ons
+  listings are pending review. Links will be added here once
+  each listing is live.
+</p>
+
+<footer>
+  <p>
+    Contact:
+    <a href="mailto:vusal.memmedli25official@gmail.com">vusal.memmedli25official@gmail.com</a>
+  </p>
+  <p>
+    <a href="privacy-policy.html">Privacy policy</a>
+    &middot;
+    <a href="https://github.com/VMammedov/auto-ai-replayer">Source on GitHub</a>
+  </p>
+</footer>
+
+</main>
+</body>
+</html>
